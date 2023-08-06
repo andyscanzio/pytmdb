@@ -1,7 +1,7 @@
 import pytest
 
-from pytmdb.models.search_models import SearchCollection
-from pytmdb.models.search_models import SearchPerson
+from pytmdb.models.models import SearchCollection
+from pytmdb.models.models import SearchPerson
 from pytmdb.search import Search
 from pytmdb.tmdb import TMDB
 

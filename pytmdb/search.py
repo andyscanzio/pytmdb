@@ -5,10 +5,10 @@ from typing import TypeVar
 
 import requests
 
-from pytmdb.models.search_models import SearchCollection
-from pytmdb.models.search_models import SearchCompany
-from pytmdb.models.search_models import SearchPerson
-from pytmdb.models.search_models import SearchResponse
+from pytmdb.models.models import SearchCollection
+from pytmdb.models.models import SearchCompany
+from pytmdb.models.models import SearchPerson
+from pytmdb.models.models import SearchResponse
 from pytmdb.utils import add_params
 
 if TYPE_CHECKING:
