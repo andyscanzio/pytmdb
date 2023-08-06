@@ -1,3 +1,5 @@
+# flake8: noqa E501
+
 from pytmdb.search import SearchCollection
 from pytmdb.search import SearchMovie
 from pytmdb.search import SearchPerson

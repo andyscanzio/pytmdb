@@ -1,6 +1,9 @@
+from __future__ import annotations
+
 import requests
 
-ParamType = dict[str, str | bool | int | None]
+ParamType = str | bool | int | None
+ParamsType = dict[str, ParamType]
 
 
 class TMDB:
@@ -15,5 +18,5 @@ class TMDB:
             "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5ZThkMGYzYzYwZmExM2ZiNjEyNjhiMjA0Y2E3Y2Y0ZSIsInN1YiI6IjY0Y2U2NWNlNmQ0Yzk3MDEwZDUwNzVmNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.cN5wSn0EN0w4EHFyDKsMn6Akk6hTcfFwGO1I0Fu_MLA",
         }
 
-    def get(self, url: str, params: ParamType) -> requests.Response:
+    def get(self, url: str, params: ParamsType) -> requests.Response:
         return requests.get(url, params=params, headers=self.header)
