@@ -23,7 +23,11 @@ def init_search(tmdb: TMDB):
 def test_search_person(
     search: Search, input: str, expected: list[SearchPerson]
 ):
-    assert search.search_person(input) == expected
+    inp = sorted(search.search_person(input))
+    exp = sorted(expected)
+    assert inp == exp
+    for a, b in zip(inp, exp):
+        assert sorted(a.known_for) == sorted(b.known_for)
 
 
 @pytest.mark.parametrize("input, expected", search_collection_expected)

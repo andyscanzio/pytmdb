@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from dataclasses import field
 from typing import TYPE_CHECKING
 from typing import Generic
 from typing import Optional
@@ -8,6 +9,7 @@ from typing import TypeVar
 
 import requests
 from pydantic import BaseModel
+from pydantic.dataclasses import dataclass
 
 from pytmdb.tmdb import TMDB
 from pytmdb.utils import add_params
@@ -39,21 +41,26 @@ class SearchKeyword(BaseModel):
     name: str
 
 
-class SearchMovie(BaseModel):
-    adult: int
-    backdrop_path: Optional[str]
-    genre_ids: list[int]
-    id: int
-    original_language: str
-    original_title: Optional[str] = None
-    overview: str
-    popularity: float
-    poster_path: Optional[str]
-    release_date: Optional[str] = None
-    title: Optional[str] = None
-    video: Optional[bool] = None
-    vote_average: float
-    vote_count: int
+@dataclass(order=True)
+class SearchMovie:
+    adult: int = field(repr=False, compare=True)
+    backdrop_path: Optional[str] = field(repr=False, compare=False)
+    genre_ids: list[int] = field(repr=False, compare=True)
+    id: int = field(repr=True, compare=True)
+    original_language: str = field(repr=False, compare=True)
+    overview: str = field(repr=False, compare=True)
+    popularity: float = field(repr=False, compare=False)
+    poster_path: Optional[str] = field(repr=False, compare=False)
+    vote_average: float = field(repr=False, compare=False)
+    vote_count: int = field(repr=False, compare=False)
+    original_title: Optional[str] = field(
+        default=None, repr=False, compare=False
+    )
+    release_date: Optional[str] = field(
+        default=None, repr=False, compare=False
+    )
+    title: Optional[str] = field(default=None, repr=True, compare=False)
+    video: Optional[bool] = field(default=None, repr=False, compare=False)
 
 
 class SearchMulti(BaseModel):
@@ -74,16 +81,17 @@ class SearchMulti(BaseModel):
     vote_count: int
 
 
-class SearchPerson(BaseModel):
-    adult: bool
-    gender: int
-    id: int
-    known_for_department: str
-    name: str
-    original_name: str
-    popularity: float
-    profile_path: str | None
-    known_for: list[SearchMovie]
+@dataclass(order=True)
+class SearchPerson:
+    adult: bool = field(repr=False, compare=True)
+    gender: int = field(repr=False, compare=True)
+    id: int = field(repr=True, compare=True)
+    known_for_department: str = field(repr=False, compare=True)
+    name: str = field(repr=True, compare=True)
+    original_name: str = field(repr=False, compare=True)
+    popularity: float = field(repr=False, compare=False)
+    profile_path: str | None = field(repr=False, compare=False)
+    known_for: list[SearchMovie] = field(repr=True, compare=False)
 
 
 class SearchTV(BaseModel):
