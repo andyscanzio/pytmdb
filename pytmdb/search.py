@@ -5,7 +5,7 @@ from typing import TypeVar
 import requests
 from pydantic import BaseModel
 
-from tmdb import TMDB
+from .tmdb import TMDB
 
 
 class SearchCollection(BaseModel):

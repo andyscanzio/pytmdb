@@ -1,11 +1,10 @@
 from pprint import pprint
 
-from search import Search
-
-from tmdb import TMDB
+from pytmdb.search import Search
+from pytmdb.tmdb import TMDB
 
 t = TMDB()
 s = Search(t)
 r = s.search_person("jack n")
 
-print(r)
+pprint(r)
