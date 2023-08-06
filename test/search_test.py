@@ -1,8 +1,8 @@
 import pytest
 
+from pytmdb.models.search_models import SearchCollection
+from pytmdb.models.search_models import SearchPerson
 from pytmdb.search import Search
-from pytmdb.search import SearchCollection
-from pytmdb.search import SearchPerson
 from pytmdb.tmdb import TMDB
 
 from .search_data import search_collection_expected

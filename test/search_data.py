@@ -1,8 +1,8 @@
 # flake8: noqa E501
 
-from pytmdb.search import SearchCollection
-from pytmdb.search import SearchMovie
-from pytmdb.search import SearchPerson
+from pytmdb.models.search_models import SearchCollection
+from pytmdb.models.search_models import SearchMovie
+from pytmdb.models.search_models import SearchPerson
 
 search_person_expected = [
     (
