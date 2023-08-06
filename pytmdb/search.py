@@ -1,11 +1,15 @@
+from __future__ import annotations
+
 from typing import Generic
 from typing import Optional
+from typing import Self
 from typing import TypeVar
 
 import requests
 from pydantic import BaseModel
 
 from .tmdb import TMDB
+from .tmdb import ParamType
 
 
 class SearchCollection(BaseModel):
@@ -98,11 +102,15 @@ class SearchTV(BaseModel):
 T = TypeVar("T")
 
 
-class SearchRequest(BaseModel, Generic[T]):
+class SearchResponse(BaseModel, Generic[T]):
     page: int
     total_pages: int
     total_results: int
     results: list[T]
+
+    @classmethod
+    def parse(cls, response: requests.Response) -> Self:
+        return cls(**response.json())
 
 
 class Search:
@@ -110,23 +118,25 @@ class Search:
         self.tmdb = tmdb
         self.url = self.tmdb.url + "search/"
 
-    def search_person(
+    def search_collection(
         self,
         query: str,
         include_adult: bool = False,
         language: str = "en-US",
         page: int = 1,
-    ) -> list[SearchPerson]:
-        url = self.url + "person?"
-        params = {
+        region: Optional[str] = None,
+    ) -> list[SearchCollection]:
+        url = self.url + "collection?"
+        params: ParamType = {
             "query": query,
             "include_adult": include_adult,
             "language": language,
             "page": page,
+            "region": region,
         }
 
-        request = requests.get(url, params=params, headers=self.tmdb.header)
-        response = SearchRequest[SearchPerson](**request.json())
+        request = self.tmdb.get(url, params=params)
+        response = SearchResponse[SearchCollection].parse(request)
 
         value = [result for result in response.results]
 
@@ -136,7 +146,38 @@ class Search:
                 request = requests.get(
                     url, params=params, headers=self.tmdb.header
                 )
-                response = SearchRequest[SearchPerson](**request.json())
+                response = SearchResponse[SearchCollection].parse(request)
+                value.extend(result for result in response.results)
+
+        return value
+
+    def search_person(
+        self,
+        query: str,
+        include_adult: bool = False,
+        language: str = "en-US",
+        page: int = 1,
+    ) -> list[SearchPerson]:
+        url = self.url + "person?"
+        params: ParamType = {
+            "query": query,
+            "include_adult": include_adult,
+            "language": language,
+            "page": page,
+        }
+
+        request = self.tmdb.get(url, params=params)
+        response = SearchResponse[SearchPerson].parse(request)
+
+        value = [result for result in response.results]
+
+        if response.total_pages != 1:
+            for i in range(1, response.total_pages):
+                params["page"] = i + 1
+                request = requests.get(
+                    url, params=params, headers=self.tmdb.header
+                )
+                response = SearchResponse[SearchPerson].parse(request)
                 value.extend(result for result in response.results)
 
         return value
