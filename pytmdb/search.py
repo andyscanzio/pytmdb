@@ -5,10 +5,10 @@ from typing import TypeVar
 
 import requests
 
-from pytmdb.models.models import SearchCollection
-from pytmdb.models.models import SearchCompany
-from pytmdb.models.models import SearchPerson
-from pytmdb.models.models import SearchResponse
+from pytmdb.models import SearchCollection
+from pytmdb.models import SearchCompany
+from pytmdb.models import SearchPerson
+from pytmdb.models import SearchResponse
 from pytmdb.utils import add_params
 
 if TYPE_CHECKING:
@@ -32,17 +32,15 @@ class Search:
         page: int | None,
     ) -> list[T]:
         request = self.tmdb.get(url, params=params)
-        response = SearchResponse[search_class].parse(request)
+        response = SearchResponse[search_class].parse(request)  # type: ignore
 
         value = [result for result in response.results]
 
         if page is None and response.total_pages != 1:
             for i in range(1, response.total_pages):
                 params["page"] = i + 1
-                request = requests.get(
-                    url, params=params, headers=self.tmdb.header
-                )
-                response = SearchResponse[search_class].parse(request)
+                request = requests.get(url, params=params, headers=self.tmdb.header)
+                response = SearchResponse[search_class].parse(request)  # type: ignore
                 value.extend(result for result in response.results)
 
         return value
@@ -71,9 +69,7 @@ class Search:
         return self._search_generic(SearchCollection, url, params, page)
 
     def search_company(self, query: str, page: int) -> list[SearchCompany]:
-        return [
-            SearchCompany(id=1, logo_path="a", origin_country="a", name="a")
-        ]
+        return [SearchCompany(id=1, logo_path="a", origin_country="a", name="a")]
 
     def search_person(
         self,

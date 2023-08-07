@@ -2,7 +2,15 @@
 name = "pytmdb"
 version = "0.0.1"
 description = "Wrapper around the TMBD API"
+dependencies = ['requests', 'types-requests', 'pydantic']
+
+[project.optional-dependencies]
+tests = ['coverage', 'pytest', 'pytest-stub']
+tox = ['tox']
 
 [build-system]
 requires = ["setuptools >= 61.0.0"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-data]
+"pkgname" = ["py.typed"]

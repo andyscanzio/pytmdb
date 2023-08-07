@@ -1,7 +1,7 @@
 import pytest
 
-from pytmdb.models.models import SearchCollection
-from pytmdb.models.models import SearchPerson
+from pytmdb.models import SearchCollection
+from pytmdb.models import SearchPerson
 from pytmdb.search import Search
 from pytmdb.tmdb import TMDB
 
@@ -20,9 +20,7 @@ def init_search(tmdb: TMDB):
 
 
 @pytest.mark.parametrize("input, expected", search_person_expected)
-def test_search_person(
-    search: Search, input: str, expected: list[SearchPerson]
-):
+def test_search_person(search: Search, input: str, expected: list[SearchPerson]):
     inp = sorted(search.search_person(input))
     exp = sorted(expected)
     assert inp == exp

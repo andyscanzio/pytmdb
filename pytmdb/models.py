@@ -48,12 +48,8 @@ class SearchMovie:
     poster_path: Optional[str] = field(repr=False, compare=False)
     vote_average: float = field(repr=False, compare=False)
     vote_count: int = field(repr=False, compare=False)
-    original_title: Optional[str] = field(
-        default=None, repr=False, compare=False
-    )
-    release_date: Optional[str] = field(
-        default=None, repr=False, compare=False
-    )
+    original_title: Optional[str] = field(default=None, repr=False, compare=False)
+    release_date: Optional[str] = field(default=None, repr=False, compare=False)
     title: Optional[str] = field(default=None, repr=True, compare=False)
     video: Optional[bool] = field(default=None, repr=False, compare=False)
 
