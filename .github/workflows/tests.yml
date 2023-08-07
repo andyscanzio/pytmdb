@@ -17,7 +17,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8
       - name: Run flake8
-        uses: flake8 src tests
+        uses: flake8 .
+
   mypy:
     runs-on: ubuntu-latest
     steps:
@@ -30,7 +31,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install mypy
       - name: Run flake8
-        uses: mypy src tests
+        uses: mypy .
+
   test:
     runs-on: ${{ matrix.os }}
     strategy:
