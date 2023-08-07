@@ -5,6 +5,32 @@ on:
   - pull_request
 
 jobs:
+  flake8:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install flake8
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8
+      - name: Run flake8
+        uses: flake8 src tests
+  mypy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install flake8
+      run: |
+        python -m pip install --upgrade pip
+        pip install mypy
+      - name: Run flake8
+        uses: mypy src tests
   test:
     runs-on: ${{ matrix.os }}
     strategy:
@@ -13,9 +39,9 @@ jobs:
         python-version: ['3.8', '3.9', '3.10', '3.11']
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
