@@ -6,7 +6,7 @@ dependencies = ['requests', 'types-requests', 'pydantic']
 
 [project.optional-dependencies]
 tests = ['coverage', 'pytest', 'pytest-stub']
-dev = ['tox', 'flake8', 'black', 'isort']
+dev = ['tox', 'flake8', 'black', 'isort', 'mypy']
 
 [build-system]
 requires = ["setuptools >= 61.0.0"]
