@@ -1,9 +1,14 @@
 from __future__ import annotations
 
+from typing import TYPE_CHECKING
+from typing import Optional
+from typing import Union
+
 import requests
 
-ParamType = str | bool | int | None
-ParamsType = dict[str, ParamType]
+if TYPE_CHECKING:
+    ParamType = Optional[Union[str, bool, int]]
+    ParamsType = dict[str, ParamType]
 
 
 class TMDB:

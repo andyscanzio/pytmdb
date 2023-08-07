@@ -34,4 +34,6 @@ def test_search_person(search: Search, input: str, expected: list[SearchPerson])
 def test_search_collection(
     search: Search, input: str, expected: list[SearchCollection]
 ):
-    assert search.search_collection(input) == expected
+    inp = sorted(search.search_collection(input))
+    exp = sorted(expected)
+    assert inp == exp

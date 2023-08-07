@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from typing import TYPE_CHECKING
+from typing import Optional
 from typing import TypeVar
 
 import requests
@@ -29,7 +30,7 @@ class Search:
         search_class: type[T],
         url: str,
         params: ParamsType,
-        page: int | None,
+        page: Optional[int],
     ) -> list[T]:
         request = self.tmdb.get(url, params=params)
         response = SearchResponse[search_class].parse(request)  # type: ignore
@@ -48,10 +49,10 @@ class Search:
     def search_collection(
         self,
         query: str,
-        include_adult: bool | None = None,
-        language: str | None = None,
-        page: int | None = None,
-        region: str | None = None,
+        include_adult: Optional[bool] = None,
+        language: Optional[str] = None,
+        page: Optional[int] = None,
+        region: Optional[str] = None,
     ) -> list[SearchCollection]:
         assert query is not None
         url = self.url + "collection?"
@@ -74,9 +75,9 @@ class Search:
     def search_person(
         self,
         query: str,
-        include_adult: bool | None = None,
-        language: str | None = None,
-        page: int | None = None,
+        include_adult: Optional[bool] = None,
+        language: Optional[str] = None,
+        page: Optional[int] = None,
     ) -> list[SearchPerson]:
         assert query is not None
         url = self.url + "person?"

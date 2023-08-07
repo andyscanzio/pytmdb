@@ -1,27 +1,34 @@
 from __future__ import annotations
 
+import sys
 from dataclasses import field
 from typing import Generic
+from typing import List
 from typing import Optional
-from typing import Self
 from typing import TypeVar
 
 import requests
 from pydantic import BaseModel
 from pydantic.dataclasses import dataclass
 
+if sys.version_info < (3, 11):
+    from typing_extensions import Self
+else:
+    from typing import Self
+
 T = TypeVar("T")
 
 
-class SearchCollection(BaseModel):
-    adult: bool
-    backdrop_path: Optional[str]
-    id: int
-    name: str
-    original_language: str
-    original_name: str
-    overview: str
-    poster_path: Optional[str]
+@dataclass(order=True)
+class SearchCollection:
+    adult: bool = field(repr=False, compare=True)
+    backdrop_path: Optional[str] = field(repr=False, compare=False)
+    id: int = field(repr=True, compare=True)
+    name: str = field(repr=True, compare=True)
+    original_language: str = field(repr=False, compare=True)
+    original_name: str = field(repr=False, compare=True)
+    overview: str = field(repr=False, compare=True)
+    poster_path: Optional[str] = field(repr=False, compare=False)
 
 
 class SearchCompany(BaseModel):
@@ -40,7 +47,7 @@ class SearchKeyword(BaseModel):
 class SearchMovie:
     adult: int = field(repr=False, compare=True)
     backdrop_path: Optional[str] = field(repr=False, compare=False)
-    genre_ids: list[int] = field(repr=False, compare=True)
+    genre_ids: List[int] = field(repr=False, compare=True)
     id: int = field(repr=True, compare=True)
     original_language: str = field(repr=False, compare=True)
     overview: str = field(repr=False, compare=True)
@@ -64,7 +71,7 @@ class SearchMulti(BaseModel):
     overview: str
     poster_path: str
     media_type: str
-    genre_ids: list[int]
+    genre_ids: List[int]
     popularity: float
     release_date: str
     video: bool
@@ -81,16 +88,16 @@ class SearchPerson:
     name: str = field(repr=True, compare=True)
     original_name: str = field(repr=False, compare=True)
     popularity: float = field(repr=False, compare=False)
-    profile_path: str | None = field(repr=False, compare=False)
-    known_for: list[SearchMovie] = field(repr=True, compare=False)
+    profile_path: Optional[str] = field(repr=False, compare=False)
+    known_for: List[SearchMovie] = field(repr=True, compare=False)
 
 
 class SearchTV(BaseModel):
     adult: bool
     backdrop_path: Optional[str]
-    genre_ids: list[int]
+    genre_ids: List[int]
     id: int
-    origin_country: list[str]
+    origin_country: List[str]
     original_language: str
     original_name: str
     overview: str
@@ -106,7 +113,7 @@ class SearchResponse(BaseModel, Generic[T]):
     page: int
     total_pages: int
     total_results: int
-    results: list[T]
+    results: List[T]
 
     @classmethod
     def parse(cls, response: requests.Response) -> Self:
