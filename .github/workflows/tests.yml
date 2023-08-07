@@ -51,10 +51,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install 'pytmdb[tests]'
           pip install -e .
-    - name: run tests
-      run: coverage run -m pytest tests
-    - name: check coverage
-      run: coverage report --fail-under=100
+      - name: run tests
+        run: coverage run -m pytest tests
+      - name: check coverage
+        run: coverage report --fail-under=100
 
   test:
     needs: [flake8, mypy, coverage]
