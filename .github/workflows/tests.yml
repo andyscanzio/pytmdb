@@ -58,7 +58,7 @@ jobs:
 
   test:
     needs: [flake8, mypy, coverage]
-    if: contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled')
+    if: success()
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
