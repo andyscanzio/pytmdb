@@ -8,6 +8,7 @@ import requests
 
 from pytmdb.models import SearchCollection
 from pytmdb.models import SearchCompany
+from pytmdb.models import SearchKeyword
 from pytmdb.models import SearchPerson
 from pytmdb.models import SearchResponse
 from pytmdb.utils import add_params
@@ -69,8 +70,25 @@ class Search:
 
         return self._search_generic(SearchCollection, url, params, page)
 
-    def search_company(self, query: str, page: int = 1) -> list[SearchCompany]:
-        return []
+    def search_company(
+        self, query: str, page: Optional[int] = None
+    ) -> list[SearchCompany]:
+        assert query is not None
+        url = self.url + "company?"
+        params: ParamsType = {"query": query}
+
+        params = add_params(params, (("page", page),))
+        return self._search_generic(SearchCompany, url, params, page)
+
+    def search_keyword(
+        self, query: str, page: Optional[int] = None
+    ) -> list[SearchKeyword]:
+        assert query is not None
+        url = self.url + "keyword?"
+        params: ParamsType = {"query": query}
+
+        params = add_params(params, (("page", page),))
+        return self._search_generic(SearchKeyword, url, params, page)
 
     def search_person(
         self,

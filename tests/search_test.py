@@ -3,11 +3,13 @@ from __future__ import annotations
 import pytest
 
 from pytmdb.models import SearchCollection
+from pytmdb.models import SearchCompany
 from pytmdb.models import SearchPerson
 from pytmdb.search import Search
 from pytmdb.tmdb import TMDB
 
 from .search_data import search_collection_expected
+from .search_data import search_company_expected
 from .search_data import search_person_expected
 
 
@@ -39,5 +41,8 @@ def test_search_collection(
     assert inp == exp
 
 
-def test_search_company(search: Search):
-    assert search.search_company("test") == []
+@pytest.mark.parametrize("input, expected", search_company_expected)
+def test_search_company(search: Search, input: str, expected: list[SearchCompany]):
+    inp = sorted(search.search_company(input))
+    exp = sorted(expected)
+    assert inp == exp

@@ -1,6 +1,7 @@
 # flake8: noqa E501
 
 from pytmdb.models import SearchCollection
+from pytmdb.models import SearchCompany
 from pytmdb.models import SearchMovie
 from pytmdb.models import SearchPerson
 
@@ -1803,6 +1804,133 @@ search_collection_expected = [
                 overview="The two strange stories of Alan Karlssons life through 100 years of history.",
                 poster_path="/pltGbYWNvCUw0G018k7byKNJyWE.jpg",
             ),
+        ],
+    ),
+]
+
+search_company_expected = [
+    (
+        "test",
+        [
+            SearchCompany(
+                id=3253, logo_path=None, name="Testament Film", origin_country="RS"
+            ),
+            SearchCompany(
+                id=152184,
+                logo_path=None,
+                name="El Testamento de María",
+                origin_country="",
+            ),
+            SearchCompany(
+                id=77916,
+                logo_path=None,
+                name="Producciones Testimonio S.A.",
+                origin_country="",
+            ),
+            SearchCompany(
+                id=15773, logo_path=None, name="Limit Test Team", origin_country=""
+            ),
+            SearchCompany(
+                id=121237,
+                logo_path=None,
+                name="Mic Test Entertainment Inc.",
+                origin_country="",
+            ),
+            SearchCompany(
+                id=84783,
+                logo_path="/FgUZnTXfLk2X4AN3QXisg7lAhb.png",
+                name="Testimony Films",
+                origin_country="GB",
+            ),
+            SearchCompany(
+                id=129327, logo_path=None, name="Ideas Test", origin_country=""
+            ),
+            SearchCompany(
+                id=94376,
+                logo_path=None,
+                name="Acid Test Productions",
+                origin_country="",
+            ),
+            SearchCompany(
+                id=156993, logo_path=None, name="Test Area North", origin_country=""
+            ),
+            SearchCompany(
+                id=158426,
+                logo_path=None,
+                name="Some Nefarious Testicle",
+                origin_country="",
+            ),
+            SearchCompany(
+                id=19663, logo_path=None, name="Testify Media", origin_country=""
+            ),
+            SearchCompany(
+                id=19745,
+                logo_path=None,
+                name="Testa Gay Cinematografica",
+                origin_country="",
+            ),
+            SearchCompany(
+                id=160528, logo_path=None, name="Testamento", origin_country=""
+            ),
+            SearchCompany(
+                id=129222, logo_path=None, name="We Testify", origin_country=""
+            ),
+            SearchCompany(
+                id=34027, logo_path=None, name="This Is Just a Test", origin_country=""
+            ),
+            SearchCompany(
+                id=139472,
+                logo_path=None,
+                name="Projective Testing Service",
+                origin_country="",
+            ),
+            SearchCompany(
+                id=173626, logo_path=None, name="Testa Cine", origin_country=""
+            ),
+            SearchCompany(
+                id=145040,
+                logo_path=None,
+                name="Testimony Productions LLC",
+                origin_country="",
+            ),
+            SearchCompany(
+                id=145289, logo_path=None, name="test società", origin_country=""
+            ),
+            SearchCompany(
+                id=150531,
+                logo_path=None,
+                name="Országos Rádió és Televízió Testület (ORTT)",
+                origin_country="",
+            ),
+            SearchCompany(
+                id=113605,
+                logo_path=None,
+                name="Elokuvayhtiö Testifilmi",
+                origin_country="FI",
+            ),
+            SearchCompany(
+                id=200792, logo_path=None, name="production test", origin_country=""
+            ),
+            SearchCompany(
+                id=202287,
+                logo_path=None,
+                name="Testmouse Productions Ltd",
+                origin_country="",
+            ),
+            SearchCompany(
+                id=12583,
+                logo_path="/vnYEkRJgZ9w1ZL777SGNqNV74b8.png",
+                name="Minds Meet",
+                origin_country="BE",
+            ),
+        ],
+    ),
+    (
+        "Test Area North",
+        [
+            SearchCompany(
+                id=156993, logo_path=None, name="Test Area North", origin_country=""
+            )
         ],
     ),
 ]

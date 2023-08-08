@@ -31,16 +31,18 @@ class SearchCollection:
     poster_path: Optional[str] = field(repr=False, compare=False)
 
 
-class SearchCompany(BaseModel):
-    id: int
-    logo_path: str
-    name: str
-    origin_country: str
+@dataclass(order=True)
+class SearchCompany:
+    id: int = field(repr=True, compare=True)
+    logo_path: Optional[str] = field(repr=True, compare=False)
+    name: str = field(repr=True, compare=True)
+    origin_country: str = field(repr=True, compare=False)
 
 
-class SearchKeyword(BaseModel):
-    id: int
-    name: str
+@dataclass(order=True)
+class SearchKeyword:
+    id: int = field(repr=True, compare=True)
+    name: str = field(repr=True, compare=True)
 
 
 @dataclass(order=True)
