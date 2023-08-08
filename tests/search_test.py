@@ -37,3 +37,7 @@ def test_search_collection(
     inp = sorted(search.search_collection(input))
     exp = sorted(expected)
     assert inp == exp
+
+
+def test_search_company(search: Search):
+    assert search.search_company("test") == []

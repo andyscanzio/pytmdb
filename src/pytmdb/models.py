@@ -11,8 +11,8 @@ import requests
 from pydantic import BaseModel
 from pydantic.dataclasses import dataclass
 
-if sys.version_info < (3, 11):
-    from typing_extensions import Self
+if sys.version_info < (3, 11):  # pragma: no branch
+    from typing_extensions import Self  # pragma: no cover
 else:
     from typing import Self
 

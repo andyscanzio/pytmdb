@@ -69,8 +69,8 @@ class Search:
 
         return self._search_generic(SearchCollection, url, params, page)
 
-    def search_company(self, query: str, page: int) -> list[SearchCompany]:
-        return [SearchCompany(id=1, logo_path="a", origin_country="a", name="a")]
+    def search_company(self, query: str, page: int = 1) -> list[SearchCompany]:
+        return []
 
     def search_person(
         self,
