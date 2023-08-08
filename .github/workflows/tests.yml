@@ -79,7 +79,7 @@ jobs:
       run: tox
 
   collector:
-    needs: [test]
+    needs: [flake8, mypy, coverage, test]
     if: always()
     runs-on: ubuntu-latest
     steps:
