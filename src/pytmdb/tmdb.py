@@ -20,14 +20,14 @@ class TMDB:
         else:
             raise ValueError("Only version 3 supported")
         if api_key is None:
-            key = os.environ.get("TMDB_API_KEY", None)
+            self.key = os.environ.get("TMDB_API_KEY", None)
         else:
-            key = api_key
-        if key is None:
-            raise ValueError("API KEY must be set")
+            self.key = api_key
+        if self.key is None:
+            raise ValueError("API KEY must be set")  # pragma: no cover
         self.header = {
             "accept": "application/json",
-            "Authorization": f"Bearer {key}",
+            "Authorization": f"Bearer {self.key}",
         }
 
     def get(self, url: str, params: ParamsType) -> requests.Response:
