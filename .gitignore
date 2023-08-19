@@ -10,3 +10,4 @@ __pycache__
 htmlcov
 .env
 build
+get_data.py

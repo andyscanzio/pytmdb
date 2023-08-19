@@ -2,10 +2,11 @@
 
 from pytmdb.models import SearchCollection
 from pytmdb.models import SearchCompany
+from pytmdb.models import SearchKeyword
 from pytmdb.models import SearchMovie
 from pytmdb.models import SearchPerson
 
-search_person_expected = [
+search_person_expected: list[tuple[str, list[SearchPerson]]] = [
     (
         "hugh jackman",
         [
@@ -1395,7 +1396,7 @@ search_person_expected = [
     ),
 ]
 
-search_collection_expected = [
+search_collection_expected: list[tuple[str, list[SearchCollection]]] = [
     (
         "All Stars Collection",
         [
@@ -1808,7 +1809,7 @@ search_collection_expected = [
     ),
 ]
 
-search_company_expected = [
+search_company_expected: list[tuple[str, list[SearchCompany]]] = [
     (
         "test",
         [
@@ -1934,6 +1935,64 @@ search_company_expected = [
             SearchCompany(
                 id=156993, logo_path=None, name="Test Area North", origin_country=""
             )
+        ],
+    ),
+]
+
+
+search_keyword_expected: list[tuple[str, list[SearchKeyword]]] = [
+    ("new testament", [SearchKeyword(id=243261, name="new testament")]),
+    (
+        "test",
+        [
+            SearchKeyword(id=193415, name="testify"),
+            SearchKeyword(id=235996, name="standardized tests"),
+            SearchKeyword(id=195260, name="crash test dummy"),
+            SearchKeyword(id=273407, name="canada fitness test"),
+            SearchKeyword(id=197264, name="love tested"),
+            SearchKeyword(id=279363, name="pregnancy test"),
+            SearchKeyword(id=282243, name="goat testicles"),
+            SearchKeyword(id=167772, name="game tester"),
+            SearchKeyword(id=223369, name="screen test"),
+            SearchKeyword(id=227497, name="turing test"),
+            SearchKeyword(id=186756, name="old testament"),
+            SearchKeyword(id=234502, name="aptitude test"),
+            SearchKeyword(id=270023, name="blood test"),
+            SearchKeyword(id=190089, name="faith tested"),
+            SearchKeyword(id=190444, name="test pilot"),
+            SearchKeyword(id=2414, name="test of courage"),
+            SearchKeyword(id=2850, name="testament"),
+            SearchKeyword(id=2880, name="test person"),
+            SearchKeyword(id=5981, name="intelligence test"),
+            SearchKeyword(id=12406, name="testting"),
+            SearchKeyword(id=279723, name="paternity test"),
+            SearchKeyword(id=211000, name="animal testing"),
+            SearchKeyword(id=229078, name="test flight"),
+            SearchKeyword(id=237226, name="weapon testing"),
+            SearchKeyword(id=4593, name="atomic bomb test"),
+            SearchKeyword(id=206741, name="driver's test"),
+            SearchKeyword(id=243261, name="new testament"),
+            SearchKeyword(id=244361, name="test subject"),
+            SearchKeyword(id=11694, name="driving test"),
+            SearchKeyword(id=209304, name="drug testing"),
+            SearchKeyword(id=10915, name="last will and testament"),
+            SearchKeyword(id=40925, name="fertility test"),
+            SearchKeyword(id=220011, name="nuclear testing"),
+            SearchKeyword(id=157764, name="testosterone"),
+            SearchKeyword(id=285355, name="gender test"),
+            SearchKeyword(id=168491, name="testicles"),
+            SearchKeyword(id=171814, name="medical test"),
+            SearchKeyword(id=258446, name="test screening"),
+            SearchKeyword(id=288328, name="beta test"),
+            SearchKeyword(id=182711, name="dna testing"),
+            SearchKeyword(id=185337, name="test of faithfulness"),
+            SearchKeyword(id=185341, name="test by fire"),
+            SearchKeyword(id=292706, name="test & trace"),
+            SearchKeyword(id=295812, name="testimony"),
+            SearchKeyword(id=298409, name="test rocket"),
+            SearchKeyword(id=313686, name="testimonials"),
+            SearchKeyword(id=315989, name="relationship test"),
+            SearchKeyword(id=317811, name="testicle sucking"),
         ],
     ),
 ]
