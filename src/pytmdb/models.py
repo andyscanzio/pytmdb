@@ -19,7 +19,7 @@ else:
 T = TypeVar("T")
 
 
-@dataclass(order=True)
+@dataclass(order=True, slots=True)
 class SearchCollection:
     adult: bool = field(repr=False, compare=True)
     backdrop_path: Optional[str] = field(repr=False, compare=False)
@@ -31,7 +31,7 @@ class SearchCollection:
     poster_path: Optional[str] = field(repr=False, compare=False)
 
 
-@dataclass(order=True)
+@dataclass(order=True, slots=True)
 class SearchCompany:
     id: int = field(repr=True, compare=True)
     logo_path: Optional[str] = field(repr=True, compare=False)
@@ -39,13 +39,13 @@ class SearchCompany:
     origin_country: str = field(repr=True, compare=False)
 
 
-@dataclass(order=True)
+@dataclass(order=True, slots=True)
 class SearchKeyword:
     id: int = field(repr=True, compare=True)
     name: str = field(repr=True, compare=True)
 
 
-@dataclass(order=True)
+@dataclass(order=True, slots=True)
 class SearchMovie:
     adult: int = field(repr=False, compare=True)
     backdrop_path: Optional[str] = field(repr=False, compare=False)
@@ -81,7 +81,7 @@ class SearchMulti(BaseModel):
     vote_count: int
 
 
-@dataclass(order=True)
+@dataclass(order=True, slots=True)
 class SearchPerson:
     adult: bool = field(repr=False, compare=True)
     gender: int = field(repr=False, compare=True)

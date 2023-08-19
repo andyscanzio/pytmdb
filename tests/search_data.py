@@ -20,7 +20,7 @@ search_person_expected = [
                 profile_path="/4Xujtewxqt6aU0Y81tsS9gkjizk.jpg",
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/9X7YweCJw3q8Mcf6GadxReFEksM.jpg",
                         genre_ids=[28, 18, 878],
                         id=263115,
@@ -36,7 +36,7 @@ search_person_expected = [
                         vote_count=17959,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/6RZZNx2irPBou7JyFGwOIoioPYK.jpg",
                         genre_ids=[28, 12, 878],
                         id=127585,
@@ -52,7 +52,7 @@ search_person_expected = [
                         vote_count=14309,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/oWKcexbupmmdUEtU8h0WK1DUWmt.jpg",
                         genre_ids=[18, 53, 80],
                         id=146233,
@@ -85,7 +85,7 @@ search_person_expected = [
                 profile_path="/hBHcQIEa6P48HQAlLZkh0eKSSkG.jpg",
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/mmd1HnuvAzFc4iuVJcnBrhDNEKr.jpg",
                         genre_ids=[27, 53],
                         id=694,
@@ -101,7 +101,7 @@ search_person_expected = [
                         vote_count=15998,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/6WRrGYalXXveItfpnipYdayFkQB.jpg",
                         genre_ids=[18, 53, 80],
                         id=1422,
@@ -117,7 +117,7 @@ search_person_expected = [
                         vote_count=13634,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/qUq3QTr2KLvGIcN0GaaaYx9bbyH.jpg",
                         genre_ids=[18],
                         id=510,
@@ -145,7 +145,7 @@ search_person_expected = [
                 profile_path="/7j4DfC2JLPdInoNUbVHthNYoSpm.jpg",
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/qUq3QTr2KLvGIcN0GaaaYx9bbyH.jpg",
                         genre_ids=[18],
                         id=510,
@@ -161,7 +161,7 @@ search_person_expected = [
                         vote_count=9524,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/lNlWuDxf3EvnbpNCMc7zVtpEQAC.jpg",
                         genre_ids=[27],
                         id=9552,
@@ -177,7 +177,7 @@ search_person_expected = [
                         vote_count=7096,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/yjGllQUm28R4X9xD9T5xMszirgw.jpg",
                         genre_ids=[80, 18],
                         id=235,
@@ -205,7 +205,7 @@ search_person_expected = [
                 profile_path=None,
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/bZbBTrefbgTvVK8CN56zKIHNomI.jpg",
                         genre_ids=[16, 10751, 14],
                         id=10144,
@@ -221,7 +221,7 @@ search_person_expected = [
                         vote_count=7219,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/8uNx4YtClqB9duM4n6jOx8vWvvl.jpg",
                         genre_ids=[35, 10749, 18],
                         id=4964,
@@ -237,7 +237,7 @@ search_person_expected = [
                         vote_count=3620,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/qhwmkPBg9MithppIXhUNVCYA4uR.jpg",
                         genre_ids=[12, 35, 10751, 878],
                         id=11158,
@@ -265,7 +265,7 @@ search_person_expected = [
                 profile_path="/jRXj49nWVcEWIzgsRAYRDWT78z9.jpg",
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path=None,
                         genre_ids=[99],
                         id=489562,
@@ -281,7 +281,7 @@ search_person_expected = [
                         vote_count=1,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/3faTSDiumSVm5FOFeaZAene3hrk.jpg",
                         genre_ids=[],
                         id=138229,
@@ -297,7 +297,7 @@ search_person_expected = [
                         vote_count=1,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path=None,
                         genre_ids=[],
                         id=62240,
@@ -325,7 +325,7 @@ search_person_expected = [
                 profile_path=None,
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/oTOKHnJRNmZh4JtuE5GJ2tFVpWW.jpg",
                         genre_ids=[80, 18, 53],
                         id=1830,
@@ -353,7 +353,7 @@ search_person_expected = [
                 profile_path="/cMqupP12hfmjAeqkQZzq2NADrcc.jpg",
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/hPea3Qy5Gd6z4kJLUruBbwAH8Rm.jpg",
                         genre_ids=[80, 18],
                         id=60059,
@@ -369,7 +369,7 @@ search_person_expected = [
                         vote_count=4225,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/A5lVyejMsP5G7rAJBwU9ug3Wzou.jpg",
                         genre_ids=[18],
                         id=1104,
@@ -385,7 +385,7 @@ search_person_expected = [
                         vote_count=999,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/qQnIdQhRA9VO8X8lF5Jo6ZwE9AN.jpg",
                         genre_ids=[35, 18],
                         id=99652,
@@ -424,7 +424,7 @@ search_person_expected = [
                 profile_path=None,
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/14ATSJsT3KDmHQdZY8FeEMxfPoG.jpg",
                         genre_ids=[18],
                         id=631880,
@@ -452,7 +452,7 @@ search_person_expected = [
                 profile_path="/qEUZrDy9THtA1wyroAWnZLw0tvi.jpg",
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path=None,
                         genre_ids=[],
                         id=17517,
@@ -480,7 +480,7 @@ search_person_expected = [
                 profile_path="/gOT0spc30erZLUUg6oAgHJzh8XX.jpg",
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path=None,
                         genre_ids=[18, 10751, 9648],
                         id=274489,
@@ -496,7 +496,7 @@ search_person_expected = [
                         vote_count=3,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path=None,
                         genre_ids=[27, 14, 18],
                         id=392069,
@@ -512,7 +512,7 @@ search_person_expected = [
                         vote_count=1,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path=None,
                         genre_ids=[18, 10751],
                         id=276619,
@@ -540,7 +540,7 @@ search_person_expected = [
                 profile_path="/v7rfKbvMWGOh5xn70MzWfOXPZlT.jpg",
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/cbAoDAE4zv5PdHOBwH0fsrmVKmN.jpg",
                         genre_ids=[80, 35],
                         id=788186,
@@ -556,7 +556,7 @@ search_person_expected = [
                         vote_count=0,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path=None,
                         genre_ids=[18, 10749],
                         id=865183,
@@ -572,7 +572,7 @@ search_person_expected = [
                         vote_count=0,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path=None,
                         genre_ids=[35, 80],
                         id=881270,
@@ -600,7 +600,7 @@ search_person_expected = [
                 profile_path=None,
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/zMDfSDW6n5dyoVdZA9Bswc7aRy0.jpg",
                         genre_ids=[99],
                         id=661271,
@@ -628,7 +628,7 @@ search_person_expected = [
                 profile_path=None,
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/oXesrxVxymFwlzlcLGj4DjAhlUb.jpg",
                         genre_ids=[80, 18],
                         id=94372,
@@ -656,7 +656,7 @@ search_person_expected = [
                 profile_path="/V8v5kmg0R5tPAwdE816kJqyG39.jpg",
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/2nJJxHjBTDVDIbpHylCsDVQ3alG.jpg",
                         genre_ids=[18],
                         id=716612,
@@ -684,7 +684,7 @@ search_person_expected = [
                 profile_path=None,
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/kE0G21t1ktp7pe9QrIcWtEl05RK.jpg",
                         genre_ids=[18],
                         id=665901,
@@ -712,7 +712,7 @@ search_person_expected = [
                 profile_path=None,
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path=None,
                         genre_ids=[],
                         id=536906,
@@ -740,7 +740,7 @@ search_person_expected = [
                 profile_path=None,
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/f1UJO3aL1e7TSFPZFLfBjs3eEF3.jpg",
                         genre_ids=[99],
                         id=532102,
@@ -768,7 +768,7 @@ search_person_expected = [
                 profile_path=None,
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path=None,
                         genre_ids=[],
                         id=17785,
@@ -796,7 +796,7 @@ search_person_expected = [
                 profile_path=None,
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path=None,
                         genre_ids=[],
                         id=793936,
@@ -824,7 +824,7 @@ search_person_expected = [
                 profile_path=None,
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/dAFKnTzyOBbZyRCAb33F632ctva.jpg",
                         genre_ids=[14, 18, 27, 10749],
                         id=10395,
@@ -863,7 +863,7 @@ search_person_expected = [
                 profile_path=None,
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path=None,
                         genre_ids=[],
                         id=339798,
@@ -879,7 +879,7 @@ search_person_expected = [
                         vote_count=1,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path=None,
                         genre_ids=[9648, 10770],
                         id=215096,
@@ -895,7 +895,7 @@ search_person_expected = [
                         vote_count=1,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path=None,
                         genre_ids=[80, 18, 53, 10770],
                         id=1002126,
@@ -923,7 +923,7 @@ search_person_expected = [
                 profile_path="/lpAKPGuMJKU2WUlsTSdXCsyVYXT.jpg",
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/fhtIp3Xbj0CJ9w2TsSEHuh8woOx.jpg",
                         genre_ids=[99, 10402],
                         id=545581,
@@ -939,7 +939,7 @@ search_person_expected = [
                         vote_count=15,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/pMycNh15Kr159I5YnrcA4EZ2Zzr.jpg",
                         genre_ids=[10402, 16],
                         id=894214,
@@ -955,7 +955,7 @@ search_person_expected = [
                         vote_count=3,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/jhLeBhOB7hUjNvUnGcB3oH9ilZN.jpg",
                         genre_ids=[10402, 99],
                         id=147001,
@@ -983,7 +983,7 @@ search_person_expected = [
                 profile_path=None,
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path=None,
                         genre_ids=[35],
                         id=322316,
@@ -1022,7 +1022,7 @@ search_person_expected = [
                 profile_path=None,
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path=None,
                         genre_ids=[27, 878],
                         id=219628,
@@ -1050,7 +1050,7 @@ search_person_expected = [
                 profile_path=None,
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/sOuAxEuZoITzD5t1oY2oGhxRwMU.jpg",
                         genre_ids=[],
                         id=1121361,
@@ -1078,7 +1078,7 @@ search_person_expected = [
                 profile_path=None,
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/uCqcoeEg53cd7htAa8gtdLbjteR.jpg",
                         genre_ids=[99, 10759],
                         id=227272,
@@ -1106,7 +1106,7 @@ search_person_expected = [
                 profile_path=None,
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/scf5Fgzbr66IFoqaxYwcmrJG0IA.jpg",
                         genre_ids=[37, 12, 28],
                         id=47914,
@@ -1134,7 +1134,7 @@ search_person_expected = [
                 profile_path="/DHUA9BWpNlue1Wk4eIk2r9zjUF.jpg",
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/lewYqqt8epnjFhEOIIIINX9Z8EE.jpg",
                         genre_ids=[12, 35, 18],
                         id=463257,
@@ -1150,7 +1150,7 @@ search_person_expected = [
                         vote_count=1191,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/dxnNEYgTwiX00fzu2J5NtrBWY9y.jpg",
                         genre_ids=[99],
                         id=14271,
@@ -1166,7 +1166,7 @@ search_person_expected = [
                         vote_count=76,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/5Ig66JHWuqotsTwtU2P8zg3TJhv.jpg",
                         genre_ids=[99, 18],
                         id=103026,
@@ -1194,52 +1194,52 @@ search_person_expected = [
                 profile_path="/38wJ5FrUoC9jgDN402DHYoK1AFU.jpg",
                 known_for=[
                     SearchMovie(
-                        adult=0,
-                        backdrop_path="/thLAoL6VeZGmCyDpCOeoxLvA8yS.jpg",
-                        genre_ids=[10765, 10759],
-                        id=76479,
+                        adult=False,
+                        backdrop_path="/nVh3Z7odHiZBnye4n4yTjVcNSxj.jpg",
+                        genre_ids=[28, 12, 80, 53],
+                        id=2207,
                         original_language="en",
-                        original_title=None,
-                        overview="A group of vigilantes known informally as “The Boys” set out to take down corrupt superheroes with no more than blue-collar grit and a willingness to fight dirty.",
-                        popularity=353.055,
-                        poster_path="/7Ns6tO3aYjppI5bFhyYZurOYGBT.jpg",
-                        release_date=None,
-                        title=None,
-                        video=None,
-                        vote_average=8.472,
-                        vote_count=8551,
+                        overview="An aging cop is assigned the ordinary task of escorting a fast-talking witness from police custody to a courthouse, but they find themselves running the gauntlet as other forces try to prevent them from getting there.",
+                        popularity=13.251,
+                        poster_path="/p3ygfjYH0r0kNRbglwKNUgagiZR.jpg",
+                        vote_average=6.426,
+                        vote_count=1772,
+                        original_title="16 Blocks",
+                        release_date="2006-03-01",
+                        title="16 Blocks",
+                        video=False,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/pysGisnLhmjQB2CGQCAQDxBADsH.jpg",
                         genre_ids=[80, 10765, 18, 9648],
                         id=90462,
                         original_language="en",
-                        original_title=None,
                         overview="After a vintage Chucky doll turns up at a suburban yard sale, an idyllic American town is thrown into chaos as a series of horrifying murders begin to expose the town’s hypocrisies and secrets. Meanwhile, the arrival of enemies — and allies — from Chucky’s past threatens to expose the truth behind the killings, as well as the demon doll’s untold origins.",
-                        popularity=80.747,
+                        popularity=77.33,
                         poster_path="/kY0BogCM8SkNJ0MNiHB3VTM86Tz.jpg",
+                        vote_average=7.856,
+                        vote_count=3702,
+                        original_title=None,
                         release_date=None,
                         title=None,
                         video=None,
-                        vote_average=7.86,
-                        vote_count=3694,
                     ),
                     SearchMovie(
-                        adult=0,
-                        backdrop_path="/jjmNCDyeO4yEHAq7DnPXecuw0df.jpg",
-                        genre_ids=[10751, 35],
-                        id=22081,
+                        adult=False,
+                        backdrop_path="/thLAoL6VeZGmCyDpCOeoxLvA8yS.jpg",
+                        genre_ids=[10765, 10759],
+                        id=76479,
                         original_language="en",
-                        original_title="Blizzard",
-                        overview="A young girl's aunt tells her the tale of a young ice skater and an enchanted reindeer.",
-                        popularity=5.759,
-                        poster_path="/uLGrJDBi67Bb4e3mMGoH3duefhw.jpg",
-                        release_date="2003-05-15",
-                        title="Blizzard",
-                        video=False,
-                        vote_average=5.894,
-                        vote_count=66,
+                        overview="A group of vigilantes known informally as “The Boys” set out to take down corrupt superheroes with no more than blue-collar grit and a willingness to fight dirty.",
+                        popularity=281.466,
+                        poster_path="/7Ns6tO3aYjppI5bFhyYZurOYGBT.jpg",
+                        vote_average=8.469,
+                        vote_count=8594,
+                        original_title=None,
+                        release_date=None,
+                        title=None,
+                        video=None,
                     ),
                 ],
             ),
@@ -1254,7 +1254,7 @@ search_person_expected = [
                 profile_path="/4vmaW11bjvJVftMLTjDQzdtmEYD.jpg",
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/ek1883HwUWzFliDaE6FAmJ8XoXi.jpg",
                         genre_ids=[18, 10749, 10752],
                         id=22649,
@@ -1270,7 +1270,7 @@ search_person_expected = [
                         vote_count=116,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/5cS4Es0uCJUs9SrJICojZ4HhuT5.jpg",
                         genre_ids=[80],
                         id=35986,
@@ -1286,7 +1286,7 @@ search_person_expected = [
                         vote_count=19,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/2eKw8s2m2MZv0fLrmavNDZUS4BE.jpg",
                         genre_ids=[12, 18, 10751],
                         id=16515,
@@ -1314,7 +1314,7 @@ search_person_expected = [
                 profile_path=None,
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/mvUAo9ACgmLpS4Ofc2IwD4n7WCt.jpg",
                         genre_ids=[878, 18],
                         id=17431,
@@ -1330,7 +1330,7 @@ search_person_expected = [
                         vote_count=5170,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/2K84O2cr0jRH7ROeeHJ3zbTR8Uf.jpg",
                         genre_ids=[18, 35],
                         id=93812,
@@ -1346,7 +1346,7 @@ search_person_expected = [
                         vote_count=879,
                     ),
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path="/4ANK5uSBMQxEdHSYqSqs4YMY0Ed.jpg",
                         genre_ids=[18, 10749],
                         id=283227,
@@ -1374,7 +1374,7 @@ search_person_expected = [
                 profile_path="/jOyXw2YYN2gcqpZkdxOhyypuFpo.jpg",
                 known_for=[
                     SearchMovie(
-                        adult=0,
+                        adult=False,
                         backdrop_path=None,
                         genre_ids=[28, 18],
                         id=535047,
@@ -1922,6 +1922,9 @@ search_company_expected = [
                 logo_path="/vnYEkRJgZ9w1ZL777SGNqNV74b8.png",
                 name="Minds Meet",
                 origin_country="BE",
+            ),
+            SearchCompany(
+                id=205909, logo_path=None, name="Game Test", origin_country=""
             ),
         ],
     ),
